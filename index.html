@@ -17,7 +17,7 @@
             --pink: #ff4d9d;
             --blue: #4da8ff;
 
-            /* Cores de Marcas para Ícones */
+            /* Cores de Marcas */
             --linkedin-blue: #0A66C2;
             --youtube-red: #FF0000;
             --github-dark: #181717;
@@ -31,7 +31,7 @@
 
             --header-height: 80px;
             
-            /* Variáveis do Modo Claro (Inicialmente vazias) */
+            /* Tema Claro (Vazio inicial) */
             --header-bg: transparent;
             --nav-text: #aaa;
             --nav-hover: rgba(0, 212, 255, 0.1);
@@ -55,7 +55,6 @@
             --card-border: rgba(0, 0, 0, 0.08);
             --shadow-color: rgba(0, 0, 0, 0.1);
 
-            /* Ajustes de ícones */
             --github-dark: #333;
             --dev-to-text: #333;
         }
@@ -116,7 +115,6 @@
             z-index: 1001;
         }
 
-        /* Navegação Desktop Padrão */
         nav ul { list-style: none; display: flex; gap: 1.5rem; align-items: center; }
 
         nav ul li button {
@@ -129,17 +127,13 @@
             color: var(--accent); background-color: var(--nav-hover);
         }
 
-        /* Botão de Tema Padrão (Desktop) */
         .theme-toggle {
             background: none; border: 1px solid var(--border-color); color: var(--text); font-size: 1.1rem; padding: 0.5rem; border-radius: 50%; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;
             z-index: 1001;
         }
         .theme-toggle:hover { background-color: var(--nav-hover); color: var(--accent); }
         
-        /* [NOVO] Botões Mobile (Escondidos no Desktop) */
-        .menu-toggle, #themeToggleMobile {
-            display: none;
-        }
+        .menu-toggle, #themeToggleMobile { display: none; }
         .menu-toggle {
             background: none; border: none;
             color: var(--text);
@@ -170,7 +164,6 @@
             width: 100%;
         }
 
-        /* Hero Split */
         .hero-split {
             display: flex;
             align-items: center;
@@ -199,7 +192,6 @@
         .hero-video-wrapper:hover { transform: perspective(1000px) rotateY(0deg) scale(1.02); }
         .hero-video-wrapper video { width: 100%; height: auto; display: block; }
 
-        /* Feature Cards */
         .feature-cards-container {
             display: flex;
             flex-wrap: wrap;
@@ -229,7 +221,6 @@
         .feature-card h3 { color: var(--text); font-size: 1.3rem; margin-bottom: 0.8rem; }
         .feature-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin: 0 auto; }
 
-        /* Títulos */
         h1, h2 {
             background: linear-gradient(90deg, #00d4ff, #00ff9d);
             -webkit-background-clip: text;
@@ -245,7 +236,7 @@
         h2 { font-size: 2.2rem; margin: 1.5rem 0 1rem; }
         .section p { font-size: 1.1rem; color: var(--text-muted); max-width: 800px; margin: 0.5rem auto; line-height: 1.6; }
 
-        /* Perfil e Outros Estilos Mantidos */
+        /* Perfil */
         .profile-container { display: flex; align-items: flex-start; justify-content: center; gap: 3rem; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
         .profile-left { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 200px; flex-basis: 300px; }
         .profile-photo { width: 180px; height: 240px; border-radius: 12px; overflow: hidden; border: 4px solid var(--accent); box-shadow: 0 0 30px rgba(0, 212, 255, 0.3); margin-bottom: 1.5rem; }
@@ -270,7 +261,7 @@
         .tech-tags { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0; }
         .tech-tag { background-color: var(--card-bg); color: var(--accent); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; font-weight: 500; border: 1px solid var(--card-border); }
 
-        /* Stats & Outros */
+        /* Stats */
         .stats-container { max-width: 1200px; width: 100%; margin-bottom: 4em; margin-top: 4em; padding: 0; }
         .stats { display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
         .card { background-color: var(--card-bg); padding: 1.2rem 1.5rem; border-radius: 16px; min-width: 160px; flex-grow: 1; max-width: 240px; text-align: center; box-shadow: 0 10px 30px var(--shadow-color); transition: transform 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
@@ -315,14 +306,13 @@
         .implement-group { display: flex; flex-direction: column; gap: 0.8rem; align-items: center; }
         .implement-header { font-size: 1rem; font-weight: 600; color: var(--green); }
         [data-theme="light"] .implement-header { color: #00a86b; }
-        .implement-header i { margin-right: 0.5rem; }
 
-        /* --- TABELAS COMPARATIVAS (NOVO) --- */
+        /* --- TABELAS COMPARATIVAS --- */
         .comparison-container {
             width: 100%;
             max-width: 1000px;
-            margin: 3rem auto;
-            overflow-x: auto; /* Permite scroll horizontal no mobile */
+            margin: 1rem auto;
+            overflow-x: auto; 
             background-color: var(--card-bg);
             border-radius: 16px;
             padding: 1rem;
@@ -333,7 +323,7 @@
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px; /* Garante largura mínima */
+            min-width: 600px;
         }
 
         .comparison-table th, .comparison-table td {
@@ -351,7 +341,6 @@
             font-weight: 700;
         }
 
-        /* Coluna de Destaque (ZeroHub/Soft IoT) */
         .comparison-table .highlight-col {
             background-color: rgba(0, 212, 255, 0.03);
             border-left: 1px solid var(--card-border);
@@ -367,15 +356,9 @@
             border-radius: 8px 8px 0 0;
         }
         
-        .comparison-table td.highlight-col {
-            color: var(--text);
-        }
+        .comparison-table td.highlight-col { color: var(--text); }
+        .comparison-table tr:last-child td { border-bottom: none; }
 
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* Badge de Teste (90 Devices) */
         .test-badge {
             display: inline-block;
             background-color: rgba(0, 255, 157, 0.15);
@@ -392,24 +375,17 @@
         .neutral-point { color: var(--text-muted); font-size: 0.9rem; }
         .positive-point { color: var(--green); font-size: 1rem; }
 
-        /* --- MEDIA QUERIES PARA MOBILE (max-width: 768px) --- */
-
         @media (max-width: 768px) {
-            
-            /* [HEADER E NAVEGAÇÃO] */
             header { padding: 0 1rem; }
             .header-inner { padding: 1rem 0; }
             
-            /* Mostra os toggles de Menu e Tema Mobile e centraliza o tema */
             .menu-toggle, #themeToggleMobile { display: flex; }
-            #themeToggleMobile { margin-left: auto; margin-right: 1rem; } /* Ajusta o tema para mobile */
+            #themeToggleMobile { margin-left: auto; margin-right: 1rem; }
             .menu-toggle { margin-left: 0; }
             
-            /* Esconde o menu desktop e o botão de tema desktop */
             nav { display: none; }
             .theme-desktop { display: none !important; }
             
-            /* Estilo da Navegação em Mobile (Hamburguer Aberto) */
             nav.nav-open {
                 display: block; 
                 position: fixed; 
@@ -425,52 +401,29 @@
                 z-index: 999;
             }
 
-            nav ul {
-                flex-direction: column; 
-                gap: 0;
-                padding: 0;
-            }
-
-            nav ul li {
-                width: 100%;
-                text-align: center;
-                border-bottom: 1px solid var(--border-color);
-            }
+            nav ul { flex-direction: column; gap: 0; padding: 0; }
+            nav ul li { width: 100%; text-align: center; border-bottom: 1px solid var(--border-color); }
             nav ul li:last-child { border-bottom: none; }
             
-            nav ul li button {
-                width: 100%;
-                padding: 1rem;
-                border-radius: 0;
-                font-size: 1.1rem;
-                color: var(--text);
-            }
-            nav ul li button:hover, nav ul li button.active {
-                background-color: var(--nav-hover);
-                color: var(--accent);
-            }
+            nav ul li button { width: 100%; padding: 1rem; border-radius: 0; font-size: 1.1rem; color: var(--text); }
+            nav ul li button:hover, nav ul li button.active { background-color: var(--nav-hover); color: var(--accent); }
 
-            /* [AJUSTES DE LAYOUT GERAL] */
             .section { padding: 2rem 1rem; padding-top: calc(var(--header-height) + 1rem); }
             h1 { font-size: 2.5rem; }
             h2 { font-size: 1.8rem; }
             
             .hero-split { flex-direction: column; text-align: center; gap: 2rem; }
             .hero-video-wrapper { transform: none; max-width: 100%; }
-            .hero-video-wrapper:hover { transform: none; }
 
-            /* Perfil */
             .profile-container { flex-direction: column; align-items: center; text-align: center; }
             .profile-left, .profile-right { width: 100%; }
             .profile-photo { width: 140px; height: 180px; }
             .details-grid { grid-template-columns: 1fr; }
             .profile-contact { align-items: flex-start; max-width: 300px; margin: 0 auto; }
             
-            /* Stats */
             .stats { flex-direction: column; gap: 1rem; }
             .card { min-width: 100%; max-width: 100%; }
 
-            /* Oculta elementos que atrapalham em telas pequenas */
             .page-indicator { display: none !important; }
             .scroll-hint { display: none; }
             .app-mockups { flex-direction: column; align-items: center; }
@@ -583,51 +536,50 @@
                     <div class="card"><div class="value">Privado</div><div class="label">Sem Nuvem</div></div>
                 </div>
             </div>
-            
-            <div style="margin-top: 4rem; width: 100%;">
-                <h2>Diferenciais do Ecossistema</h2>
-                <p>Por que o Soft IoT é a escolha segura para ambientes críticos.</p>
-                
-                <div class="comparison-container">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 30%;">Funcionalidade</th>
-                                <th style="width: 35%;">Big Tech (Google/Alexa)</th>
-                                <th class="highlight-col" style="width: 35%;">Soft IoT</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Privacidade de Dados</td>
-                                <td class="negative-point">Mineração de Dados / Ads</td>
-                                <td class="highlight-col positive-point">100% Privado (Local)</td>
-                            </tr>
-                            <tr>
-                                <td>Funcionamento Offline</td>
-                                <td class="neutral-point">Limitado / Parcial</td>
-                                <td class="highlight-col positive-point">Total (Core no Dispositivo)</td>
-                            </tr>
-                            <tr>
-                                <td>Capacidade de Rede</td>
-                                <td class="neutral-point">~30-50 Dispositivos (Padrão)</td>
-                                <td class="highlight-col">
-                                    <span class="positive-point">Ilimitado (P2P)</span>
-                                    <br>
-                                    <span class="test-badge"><i class="fas fa-check-circle"></i> Validado c/ 90 Nós</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Custo a Longo Prazo</td>
-                                <td class="negative-point">Assinaturas / Hardware Caro</td>
-                                <td class="highlight-col positive-point">Licença Única / Hardware Livre</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
             <div class="scroll-hint">Deslize para saber mais <i class="fas fa-chevron-down"></i></div>
+        </div>
+        
+        <div class="section">
+            <h2>Raio-X do Ecossistema</h2>
+            <p>Por que o Soft IoT é a escolha segura para ambientes críticos contra Big Techs.</p>
+            
+            <div class="comparison-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Funcionalidade</th>
+                            <th style="width: 35%;">Big Tech (Google/Alexa)</th>
+                            <th class="highlight-col" style="width: 35%;">Soft IoT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Privacidade de Dados</td>
+                            <td class="negative-point">Mineração de Dados / Ads</td>
+                            <td class="highlight-col positive-point">100% Privado (Local)</td>
+                        </tr>
+                        <tr>
+                            <td>Funcionamento Offline</td>
+                            <td class="neutral-point">Limitado / Parcial</td>
+                            <td class="highlight-col positive-point">Total (Core no Dispositivo)</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidade de Rede</td>
+                            <td class="neutral-point">~30-50 Dispositivos (Padrão)</td>
+                            <td class="highlight-col">
+                                <span class="positive-point">Ilimitado (P2P)</span>
+                                <br>
+                                <span class="test-badge"><i class="fas fa-check-circle"></i> Validado c/ 90 Nós</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Custo a Longo Prazo</td>
+                            <td class="negative-point">Assinaturas / Hardware Caro</td>
+                            <td class="highlight-col positive-point">Licença Única / Hardware Livre</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="section">
@@ -662,56 +614,55 @@
                     <div class="card crypto"><div class="value">AES</div><div class="label">GCM-256</div></div>
                 </div>
             </div>
-
-            <div style="margin-top: 4rem; width: 100%;">
-                <h2>Benchmark de Protocolo</h2>
-                <p>Comparativo técnico em ambiente real de estresse.</p>
-                
-                <div class="comparison-container">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 30%;">Critério</th>
-                                <th style="width: 25%;">HTTP (Standard)</th>
-                                <th style="width: 25%;">Cloud MQTT</th>
-                                <th class="highlight-col" style="width: 20%;">ZeroHub P2P</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Latência Local (Comando)</td>
-                                <td class="neutral-point">50ms - 150ms</td>
-                                <td class="negative-point">200ms - 1.5s</td>
-                                <td class="highlight-col positive-point">4ms - 20ms</td>
-                            </tr>
-                            <tr>
-                                <td>Dependência de Internet</td>
-                                <td class="neutral-point">Não (Se Local)</td>
-                                <td class="negative-point">Total (100%)</td>
-                                <td class="highlight-col positive-point">Zero (100% Offline)</td>
-                            </tr>
-                            <tr>
-                                <td>Escalabilidade (Gargalo)</td>
-                                <td class="negative-point">Congestiona HTTP</td>
-                                <td class="neutral-point">Depende do Broker</td>
-                                <td class="highlight-col">
-                                    Alta Performance
-                                    <br>
-                                    <span class="test-badge"><i class="fas fa-check-circle"></i> Testado c/ 90 Devices</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Segurança (Payload)</td>
-                                <td class="negative-point">Texto Plano (Geralmente)</td>
-                                <td class="neutral-point">TLS (Pesado)</td>
-                                <td class="highlight-col positive-point">AES-GCM (Nativo)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
             <div class="scroll-hint" style="margin-top: 2rem;"> Deslize para detalhes técnicos <i class="fas fa-chevron-down"></i></div>
+        </div>
+
+        <div class="section">
+            <h2>Benchmark de Performance</h2>
+            <p>Comparativo técnico em ambiente real de estresse com 90 dispositivos.</p>
+            
+            <div class="comparison-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Critério</th>
+                            <th style="width: 25%;">HTTP (Standard)</th>
+                            <th style="width: 25%;">Cloud MQTT</th>
+                            <th class="highlight-col" style="width: 20%;">ZeroHub P2P</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Latência Local (Comando)</td>
+                            <td class="neutral-point">50ms - 150ms</td>
+                            <td class="negative-point">200ms - 1.5s</td>
+                            <td class="highlight-col positive-point">4ms - 20ms</td>
+                        </tr>
+                        <tr>
+                            <td>Dependência de Internet</td>
+                            <td class="neutral-point">Não (Se Local)</td>
+                            <td class="negative-point">Total (100%)</td>
+                            <td class="highlight-col positive-point">Zero (100% Offline)</td>
+                        </tr>
+                        <tr>
+                            <td>Escalabilidade (Gargalo)</td>
+                            <td class="negative-point">Congestiona HTTP</td>
+                            <td class="neutral-point">Depende do Broker</td>
+                            <td class="highlight-col">
+                                Alta Performance
+                                <br>
+                                <span class="test-badge"><i class="fas fa-check-circle"></i> Testado c/ 90 Devices</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Segurança (Payload)</td>
+                            <td class="negative-point">Texto Plano (Geralmente)</td>
+                            <td class="neutral-point">TLS (Pesado)</td>
+                            <td class="highlight-col positive-point">AES-GCM (Nativo)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="section">
