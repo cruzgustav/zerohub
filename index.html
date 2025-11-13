@@ -317,6 +317,81 @@
         [data-theme="light"] .implement-header { color: #00a86b; }
         .implement-header i { margin-right: 0.5rem; }
 
+        /* --- TABELAS COMPARATIVAS (NOVO) --- */
+        .comparison-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 3rem auto;
+            overflow-x: auto; /* Permite scroll horizontal no mobile */
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            border: 1px solid var(--card-border);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px; /* Garante largura mínima */
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1.2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+
+        .comparison-table th {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        /* Coluna de Destaque (ZeroHub/Soft IoT) */
+        .comparison-table .highlight-col {
+            background-color: rgba(0, 212, 255, 0.03);
+            border-left: 1px solid var(--card-border);
+            border-right: 1px solid var(--card-border);
+            color: var(--text);
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .comparison-table th.highlight-col {
+            color: var(--accent);
+            border-top: 4px solid var(--accent);
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .comparison-table td.highlight-col {
+            color: var(--text);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Badge de Teste (90 Devices) */
+        .test-badge {
+            display: inline-block;
+            background-color: rgba(0, 255, 157, 0.15);
+            color: var(--green);
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            margin-top: 0.5rem;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            font-weight: 700;
+        }
+        
+        .negative-point { color: var(--pink); font-size: 0.9rem; }
+        .neutral-point { color: var(--text-muted); font-size: 0.9rem; }
+        .positive-point { color: var(--green); font-size: 1rem; }
+
         /* --- MEDIA QUERIES PARA MOBILE (max-width: 768px) --- */
 
         @media (max-width: 768px) {
@@ -492,10 +567,7 @@
                 <div class="hero-text">
                     <h1>SOFT IOT</h1>
                     <p>Automação segura, sólida e <strong>Privada</strong>.</p>
-                    <p>Funciona em <strong>Local (LAN-First)</strong>, <strong>Híbrido</strong> ou <strong>apenas WAN</strong>.</p>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 1rem;">
-                        Controle total da sua casa com latência zero. Seus dados não saem da sua rede a menos que você queira.
-                    </p>
+                    <p>Funciona em <strong>Local (LAN-First)</strong>, Híbrido ou WAN.</p>
                 </div>
                 <div class="hero-media">
                     <div class="hero-video-wrapper">
@@ -506,199 +578,188 @@
 
             <div class="stats-container">
                 <div class="stats">
-                    <div class="card"><div class="value">Solidez</div><div class="label">Rust • Dart • Motor Próprio</div></div>
-                    <div class="card"><div class="value">Segurança</div><div class="label">AES-GCM • Token Auth</div></div>
-                    <div class="card"><div class="value">Privacidade</div><div class="label">Local First • Sem Nuvem</div></div>
-                    <div class="card"><div class="value">Híbrido</div><div class="label">Local / WAN / Híbrido</div></div>
+                    <div class="card"><div class="value">Rust</div><div class="label">Core Sólido</div></div>
+                    <div class="card"><div class="value">AES-GCM</div><div class="label">Criptografia</div></div>
+                    <div class="card"><div class="value">Privado</div><div class="label">Sem Nuvem</div></div>
                 </div>
             </div>
-            <div class="scroll-hint">
-                Deslize para saber mais <i class="fas fa-chevron-down"></i>
+            
+            <div style="margin-top: 4rem; width: 100%;">
+                <h2>Diferenciais do Ecossistema</h2>
+                <p>Por que o Soft IoT é a escolha segura para ambientes críticos.</p>
+                
+                <div class="comparison-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;">Funcionalidade</th>
+                                <th style="width: 35%;">Big Tech (Google/Alexa)</th>
+                                <th class="highlight-col" style="width: 35%;">Soft IoT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Privacidade de Dados</td>
+                                <td class="negative-point">Mineração de Dados / Ads</td>
+                                <td class="highlight-col positive-point">100% Privado (Local)</td>
+                            </tr>
+                            <tr>
+                                <td>Funcionamento Offline</td>
+                                <td class="neutral-point">Limitado / Parcial</td>
+                                <td class="highlight-col positive-point">Total (Core no Dispositivo)</td>
+                            </tr>
+                            <tr>
+                                <td>Capacidade de Rede</td>
+                                <td class="neutral-point">~30-50 Dispositivos (Padrão)</td>
+                                <td class="highlight-col">
+                                    <span class="positive-point">Ilimitado (P2P)</span>
+                                    <br>
+                                    <span class="test-badge"><i class="fas fa-check-circle"></i> Validado c/ 90 Nós</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Custo a Longo Prazo</td>
+                                <td class="negative-point">Assinaturas / Hardware Caro</td>
+                                <td class="highlight-col positive-point">Licença Única / Hardware Livre</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
+            <div class="scroll-hint">Deslize para saber mais <i class="fas fa-chevron-down"></i></div>
         </div>
 
         <div class="section">
             <h2>Arquitetura Robusta</h2>
-            <p>Nossa solução é construída com tecnologias de ponta, garantindo não apenas performance, mas também a integridade e segurança de todo o ecossistema.</p>
             <div class="feature-cards-container">
-                <div class="feature-card">
-                    <i class="fab fa-rust"></i>
-                    <h3>Motor em Rust</h3>
-                    <p>Performance e segurança de memória para o núcleo da automação. Ideal para sistemas críticos.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fab fa-dev"></i>
-                    <h3>App em Dart/Flutter</h3>
-                    <p>Experiência de usuário impecável em todas as plataformas, do mobile ao desktop.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-microchip"></i>
-                    <h3>IA Ativa (Em Breve)</h3>
-                    <p>O sistema aprenderá seus hábitos localmente e sugerirá automações inteligentes prontas para uso.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Aplicações Versáteis</h2>
-            <p>Desde a comodidade do lar até a complexidade da indústria, o Soft IOT se adapta, entregando controle e dados onde você mais precisa.</p>
-            <div class="feature-cards-container">
-                <div class="feature-card">
-                    <i class="fas fa-home"></i>
-                    <h3>Automação Residencial</h3>
-                    <p>Controle de iluminação, clima, segurança e eletrodomésticos com respostas em tempo real.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-building"></i>
-                    <h3>Soluções Corporativas</h3>
-                    <p>Otimização do ambiente de trabalho, gestão de acesso e monitoramento de recursos.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Industrial IoT (IIoT)</h3>
-                    <p>Monitoramento preciso de máquinas, sensores e processos para eficiência e manutenção preditiva.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Segurança Inovadora</h2>
-            <p>Sua privacidade e a segurança dos seus dados são nossa prioridade máxima, com arquitetura local-first e conformidade rigorosa.</p>
-            <div class="feature-cards-container">
-                <div class="feature-card">
-                    <i class="fas fa-user-secret"></i>
-                    <h3>Local-First Data</h3>
-                    <p>Seus dados permanecem na sua rede, sem a necessidade de enviar para nuvens públicas.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-fingerprint"></i>
-                    <h3>Criptografia AES-GCM</h3>
-                    <p>Proteção de ponta a ponta com chaves assimétricas no pareamento e simétricas de alta performance no uso.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-id-badge"></i>
-                    <h3>Controle de Acesso</h3>
-                    <p>Autenticação por Token assinado. Apenas dispositivos autorizados com a chave mestra podem comandar.</p>
-                </div>
+                <div class="feature-card"><i class="fab fa-rust"></i><h3>Motor em Rust</h3><p>Segurança de memória.</p></div>
+                <div class="feature-card"><i class="fab fa-dev"></i><h3>App Flutter</h3><p>Multiplataforma fluido.</p></div>
+                <div class="feature-card"><i class="fas fa-microchip"></i><h3>IA Local</h3><p>Aprendizado sem nuvem.</p></div>
             </div>
         </div>
 
         <div class="section">
             <h2>Experimente o App</h2>
-            <p>Baixe nosso aplicativo e tenha o controle da sua automação na palma da sua mão. Disponível para as principais plataformas.</p>
-            <div class="app-mockups">
-                <div class="mockup-item mobile">
-                    <img src="https://via.placeholder.com/200x400/1a1a2e/00d4ff?text=App+Mobile" alt="Soft IOT Mobile App Mockup">
-                </div>
-                <div class="mockup-item desktop">
-                    <img src="https://via.placeholder.com/600x350/1a1a2e/00d4ff?text=App+Desktop/Web" alt="Soft IOT Desktop/Web App Mockup">
-                </div>
-            </div>
             <div class="download-buttons">
-                <a href="#" class="download-button apple" target="_blank"><i class="fab fa-apple"></i> Download iOS</a>
-                <a href="#" class="download-button android" target="_blank"><i class="fab fa-android"></i> Download Android</a>
-                <a href="#" class="download-button web" target="_blank"><i class="fas fa-globe"></i> Abrir Web App</a>
+                <a href="#" class="download-button apple"><i class="fab fa-apple"></i> iOS</a>
+                <a href="#" class="download-button android"><i class="fab fa-android"></i> Android</a>
+                <a href="#" class="download-button web"><i class="fas fa-globe"></i> Web</a>
             </div>
         </div>
     </div>
 
     <div id="zerohub" class="page">
         <div class="section">
-            <h1>ZEROHUB – Protocolo P2P Blindado e Rápido</h1>
-            <p>Latência local de <strong>12ms</strong>. 90+ dispositivos sem hub. Arquitetura de motor duplo para performance extrema em automação.</p>
+            <h1>ZEROHUB – Protocolo P2P Blindado</h1>
+            <p>Latência local de <strong>12ms</strong>. Arquitetura de motor duplo para performance extrema.</p>
+            
             <div class="stats-container">
                 <div class="stats">
-                    <div class="card latency"><div class="value">~12<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Quente (Comando)</div></div>
-                    <div class="card freq"><div class="value">~16<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Total (RTT)</div></div>
-                    <div class="card devices"><div class="value">15+</div><div class="label">Conexões Simultâneas</div></div>
-                    <div class="card crypto"><div class="value">AES-GCM</div><div class="label">Criptografia P2P</div></div>
+                    <div class="card latency"><div class="value">~12<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Média</div></div>
+                    <div class="card freq"><div class="value">~4<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Mínima (Reg.)</div></div>
+                    <div class="card devices"><div class="value">90+</div><div class="label">Dispositivos Testados</div></div>
+                    <div class="card crypto"><div class="value">AES</div><div class="label">GCM-256</div></div>
                 </div>
             </div>
-            <div class="license-info">
-                <p class="license-text"><i class="fas fa-user-shield"></i> Licença MIT: Liberada para uso pessoal e não-comercial.</p>
-                <div class="license-buttons">
-                    <div class="implement-group">
-                        <div class="implement-header"><i class="fab fa-dart"></i> Implemente agora</div>
-                        <pre class="dart-code-snippet" title="Clique para copiar"><code>import 'package:zero_hub/zero_hub.dart';</code></pre>
-                    </div>
-                    <div class="implement-group">
-                        <div class="implement-header" style="color: var(--blue);"><i class="fas fa-shopping-cart"></i> Uso Comercial</div>
-                        <a href="mailto:gustavonv@proton.me" class="download-button" style="background-color: var(--blue); color: white; border: none; padding: 1rem 2rem;">Comprar Licença</a>
-                    </div>
+
+            <div style="margin-top: 4rem; width: 100%;">
+                <h2>Benchmark de Protocolo</h2>
+                <p>Comparativo técnico em ambiente real de estresse.</p>
+                
+                <div class="comparison-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;">Critério</th>
+                                <th style="width: 25%;">HTTP (Standard)</th>
+                                <th style="width: 25%;">Cloud MQTT</th>
+                                <th class="highlight-col" style="width: 20%;">ZeroHub P2P</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Latência Local (Comando)</td>
+                                <td class="neutral-point">50ms - 150ms</td>
+                                <td class="negative-point">200ms - 1.5s</td>
+                                <td class="highlight-col positive-point">4ms - 20ms</td>
+                            </tr>
+                            <tr>
+                                <td>Dependência de Internet</td>
+                                <td class="neutral-point">Não (Se Local)</td>
+                                <td class="negative-point">Total (100%)</td>
+                                <td class="highlight-col positive-point">Zero (100% Offline)</td>
+                            </tr>
+                            <tr>
+                                <td>Escalabilidade (Gargalo)</td>
+                                <td class="negative-point">Congestiona HTTP</td>
+                                <td class="neutral-point">Depende do Broker</td>
+                                <td class="highlight-col">
+                                    Alta Performance
+                                    <br>
+                                    <span class="test-badge"><i class="fas fa-check-circle"></i> Testado c/ 90 Devices</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Segurança (Payload)</td>
+                                <td class="negative-point">Texto Plano (Geralmente)</td>
+                                <td class="neutral-point">TLS (Pesado)</td>
+                                <td class="highlight-col positive-point">AES-GCM (Nativo)</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
             <div class="scroll-hint" style="margin-top: 2rem;"> Deslize para detalhes técnicos <i class="fas fa-chevron-down"></i></div>
         </div>
 
         <div class="section">
-            <h2>Motores Gêmeos: A Arquitetura de Performance v56</h2>
-            <p>O "coração" do Zero Hub é seu motor de comandos v56, otimizado para eliminar gargalos e "afogamentos" de rotina.</p>
+            <h2>Motores Gêmeos: A Arquitetura v56</h2>
+            <p>O "coração" do Zero Hub é seu motor de comandos v56, otimizado para eliminar gargalos.</p>
             <div class="stats-container">
                 <div class="stats">
                     <div class="card feature-card">
                         <i class="fas fa-cogs"></i>
                         <h3>Motor 1 (Comandos)</h3>
-                        <p>Pool expandido de 15 slots paralelos. Executa rotinas complexas (13+ ações) de forma simultânea e instantânea, sem filas.</p>
+                        <p>Pool de 15 slots paralelos. Executa rotinas complexas sem filas de espera.</p>
                     </div>
                     <div class="card feature-card">
                         <i class="fas fa-assistive-listening-systems"></i>
                         <h3>Motor 2 (Advisor)</h3>
-                        <p>Dedicado a ouvir "gritos" (UDP) e atualizar a UI, garantindo que o estado esteja sempre sincronizado sem bloquear comandos.</p>
-                    </div>
-                    <div class="card feature-card">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Orquestração de Fluxo</h3>
-                        <p>Sistema inteligente que gerencia filas de execução e previne conflitos, garantindo que comandos simultâneos ocorram de forma fluida.</p>
+                        <p>Dedicado a ouvir "gritos" (UDP) e atualizar a UI em tempo real.</p>
                     </div>
                     <div class="card feature-card">
                         <i class="fas fa-shield-alt"></i>
                         <h3>Segurança Blindada</h3>
-                        <p>Token de Autenticação no header + Criptografia AES-GCM 256. Bloqueia ataques de Replay e Injeção na rede local.</p>
+                        <p>Token Auth + AES-GCM. Bloqueia ataques de Replay na rede local.</p>
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="section">
-            <h2>Arquitetura Híbrida e Segura</h2>
-            <p>Combinamos descoberta por <strong>UDP Multicast</strong> para "gritos" e scan, com canais <strong>WebSocket Seguros</strong> para controle robusto.</p>
-            <div class="stats-container">
-                <div class="stats">
-                    <div class="card feature-card">
-                        <i class="fas fa-broadcast-tower"></i>
-                        <h3>Descoberta UDP Multicast</h3>
-                        <p>Dispositivos "gritam" (shout) sua presença e mudanças de estado, permitindo ao Motor 2 (Advisor) atualizar a UI em tempo real.</p>
+            <h2>Integração Versátil</h2>
+            <p>APIs e SDKs para diversas linguagens.</p>
+            <div class="feature-cards-container">
+                <div class="feature-card"><i class="fab fa-python"></i><h3>Python SDK</h3></div>
+                <div class="feature-card"><i class="fab fa-rust"></i><h3>Rust API</h3></div>
+                <div class="feature-card"><i class="fab fa-js"></i><h3>Node.js</h3></div>
+            </div>
+            
+            <div class="license-info">
+                <p class="license-text"><i class="fas fa-user-shield"></i> Licença MIT: Liberada para uso pessoal.</p>
+                <div class="license-buttons">
+                    <div class="implement-group">
+                        <div class="implement-header"><i class="fab fa-dart"></i> Implemente agora</div>
+                        <pre class="dart-code-snippet" title="Clique para copiar"><code>import 'package:zero_hub/zero_hub.dart';</code></pre>
                     </div>
-                    <div class="card feature-card">
-                        <i class="fas fa-plug"></i>
-                        <h3>Controle WebSocket Seguro</h3>
-                        <p>Canais de comando persistentes com autenticação de Token. Só quem tem a chave entra.</p>
-                    </div>
-                    <div class="card feature-card">
-                        <i class="fas fa-wifi"></i>
-                        <h3>LAN-First por Design</h3>
-                        <p>Funciona 100% offline. A conexão WAN é opcional, garantindo privacidade total e a menor latência possível.</p>
-                    </div>
-                    <div class="card feature-card">
-                        <i class="fas fa-signature"></i>
-                        <h3>Firmware Assinado (ECDSA)</h3>
-                        <p>Validação por assinatura digital e Secure Boot para previnir anti-tampering e garantir a autenticidade do dispositivo.</p>
+                    <div class="implement-group">
+                         <div class="implement-header" style="color: var(--blue);"><i class="fas fa-shopping-cart"></i> Uso Comercial</div>
+                         <a href="mailto:gustavonv@proton.me" class="download-button" style="background-color: var(--blue); color: white; border: none; padding: 1rem 2rem;">Comprar Licença</a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="section">
-            <h2>Integração Versátil: APIs e SDKs</h2>
-            <p>O Zero Hub é projetado para ser extensível, com APIs bem documentadas e SDKs para diversas linguagens, facilitando a integração em seus projetos.</p>
-            <div class="feature-cards-container">
-                <div class="feature-card"><i class="fab fa-python"></i><h3>Python SDK</h3><p>Integrar o Zero Hub em scripts e aplicações Python de forma rápida e eficiente.</p></div>
-                <div class="feature-card"><i class="fab fa-rust"></i><h3>Rust API</h3><p>Controle direto e de baixo nível para aplicações de alta performance e sistemas embarcados.</p></div>
-                <div class="feature-card"><i class="fab fa-js"></i><h3>JavaScript/TypeScript</h3><p>Conectividade Zero Hub para aplicações web e Node.js.</p></div>
-            </div>
-            <p style="margin-top:3rem; font-size: 1.2rem; color: var(--text); font-weight: 500;">Pronto para construir com o Zero Hub?</p>
-            <p><strong>Uso não comercial:</strong> MIT License (GitHub) • <strong>Uso comercial:</strong> Exclusivo Soft IOT ou licença empresarial.</p>
-            <p style="margin-top:2rem;"><a href="mailto:gustavonv@proton.me" class="download-button" style="background-color: var(--blue); color: white; border: none; padding: 1rem 2rem;"><i class="fas fa-paper-plane"></i> Solicitar Licença Comercial</a></p>
         </div>
     </div>
 
@@ -725,14 +786,11 @@
             menuToggle.addEventListener('click', function() {
                 nav.classList.toggle('nav-open');
                 const icon = menuToggle.querySelector('i');
-                // Alterna o ícone: barras <-> X
                 icon.className = nav.classList.contains('nav-open') ? 'fas fa-times' : 'fas fa-bars';
-                
-                // Bloqueia a rolagem do corpo quando o menu móvel está aberto
                 document.body.style.overflowY = nav.classList.contains('nav-open') ? 'hidden' : 'auto';
             });
             
-            // Funções de Tema unificadas
+            // Funções de Tema
             function toggleTheme() {
                 const html = document.documentElement;
                 const currentTheme = html.getAttribute('data-theme');
@@ -746,13 +804,11 @@
                     localStorage.setItem('theme', 'light');
                 }
 
-                // Atualiza os ícones em ambos os botões
                 const iconClass = isLight ? 'fas fa-sun' : 'fas fa-moon';
                 if (themeToggleDesktop) themeToggleDesktop.querySelector('i').className = iconClass;
                 if (themeToggleMobile) themeToggleMobile.querySelector('i').className = iconClass;
             }
 
-            // Inicializa o tema e os ícones
             const savedTheme = localStorage.getItem('theme');
             const initialIcon = savedTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
             if (savedTheme === 'light') {
@@ -761,7 +817,6 @@
             if (themeToggleDesktop) themeToggleDesktop.querySelector('i').className = initialIcon;
             if (themeToggleMobile) themeToggleMobile.querySelector('i').className = initialIcon;
             
-            // Adiciona eventos de clique aos botões de tema
             if (themeToggleDesktop) themeToggleDesktop.addEventListener('click', toggleTheme);
             if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
 
@@ -821,11 +876,10 @@
                 const activeTab = document.querySelector(`[data-page="${pageId}"]`);
                 if (activeTab) { activeTab.classList.add('active'); }
                 
-                // Fechar o menu móvel ao clicar em um link
                 if (window.innerWidth <= 768 && nav.classList.contains('nav-open')) {
                      nav.classList.remove('nav-open');
                      menuToggle.querySelector('i').className = 'fas fa-bars';
-                     document.body.style.overflowY = 'auto'; // Reabilita a rolagem
+                     document.body.style.overflowY = 'auto'; 
                 }
             }
 
@@ -844,8 +898,7 @@
                         codeSnippet.setAttribute('title', 'Copiado!');
                         setTimeout(() => { codeSnippet.setAttribute('title', 'Clique para copiar'); }, 2000);
                     } catch (err) {
-                        console.error('Falha ao copiar o texto', err);
-                        codeSnippet.setAttribute('title', 'Erro ao copiar');
+                        console.error('Falha ao copiar', err);
                     }
                     document.body.removeChild(textarea);
                 });
