@@ -151,17 +151,22 @@
         .page { display: none !important; scroll-snap-type: y mandatory; overflow-y: auto; height: 100vh; }
         .page.active { display: block !important; }
 
+        /* Ajuste da Seção para evitar overlap no header */
         .section {
             min-height: 100vh;
+            /* Garante que o padding compense o header fixo */
             padding-top: calc(var(--header-height) + 2rem);
+            padding-bottom: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: center; /* Centraliza verticalmente se sobrar espaço */
             align-items: center;
             text-align: center;
-            padding: 2rem;
             scroll-snap-align: start;
             width: 100%;
+            position: relative;
         }
 
         .hero-split {
@@ -173,7 +178,7 @@
             width: 100%;
             text-align: left;
             margin-bottom: 2rem;
-            margin-top: 4rem;
+            margin-top: 2rem; /* Reduzido */
         }
         .hero-text { flex: 1; min-width: 300px; }
         .hero-media { flex: 1; display: flex; justify-content: center; min-width: 300px; }
@@ -261,8 +266,8 @@
         .tech-tags { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0; }
         .tech-tag { background-color: var(--card-bg); color: var(--accent); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; font-weight: 500; border: 1px solid var(--card-border); }
 
-        /* Stats */
-        .stats-container { max-width: 1200px; width: 100%; margin-bottom: 4em; margin-top: 4em; padding: 0; }
+        /* Stats Reduzido (Compacto) */
+        .stats-container { max-width: 1200px; width: 100%; margin-bottom: 2em; margin-top: 2em; padding: 0; }
         .stats { display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
         .card { background-color: var(--card-bg); padding: 1.2rem 1.5rem; border-radius: 16px; min-width: 160px; flex-grow: 1; max-width: 240px; text-align: center; box-shadow: 0 10px 30px var(--shadow-color); transition: transform 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-8px); }
@@ -282,7 +287,7 @@
         [data-theme="light"] .download-button.apple { background-color: #f0f0f0; }
         .download-button.android i { color: var(--android-green); } .download-button.web i { color: var(--web-blue); }
 
-        .scroll-hint { margin-top: 2rem; font-size: 0.9rem; color: #777; animation: bounce 2s infinite; }
+        .scroll-hint { margin-top: 1rem; font-size: 0.9rem; color: #777; animation: bounce 2s infinite; }
         .scroll-hint i { font-size: 1.5rem; color: var(--accent); display: block; margin-top: 0.3rem; }
         @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
 
@@ -311,6 +316,7 @@
         .comparison-container {
             width: 100%;
             max-width: 1000px;
+            /* Remove margins excessivas que causavam espaçamento extra */
             margin: 1rem auto;
             overflow-x: auto; 
             background-color: var(--card-bg);
@@ -408,7 +414,12 @@
             nav ul li button { width: 100%; padding: 1rem; border-radius: 0; font-size: 1.1rem; color: var(--text); }
             nav ul li button:hover, nav ul li button.active { background-color: var(--nav-hover); color: var(--accent); }
 
-            .section { padding: 2rem 1rem; padding-top: calc(var(--header-height) + 1rem); }
+            /* Ajuste seguro para não cortar o topo no mobile */
+            .section { 
+                padding: 2rem 1rem; 
+                padding-top: calc(var(--header-height) + 2rem); 
+                justify-content: flex-start; /* Garante que o topo sempre apareça */
+            }
             h1 { font-size: 2.5rem; }
             h2 { font-size: 1.8rem; }
             
@@ -603,18 +614,18 @@
 
     <div id="zerohub" class="page">
         <div class="section">
-            <h1>ZEROHUB – Protocolo P2P Blindado</h1>
-            <p>Latência local de <strong>12ms</strong>. Arquitetura de motor duplo para performance extrema.</p>
+            <h1>ZEROHUB – P2P Blindado</h1>
+            <p>Latência local de <strong>12ms</strong>. Arquitetura de motor duplo.</p>
             
             <div class="stats-container">
                 <div class="stats">
                     <div class="card latency"><div class="value">~12<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Média</div></div>
-                    <div class="card freq"><div class="value">~4<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Mínima (Reg.)</div></div>
-                    <div class="card devices"><div class="value">90+</div><div class="label">Dispositivos Testados</div></div>
+                    <div class="card freq"><div class="value">~4<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Mínima</div></div>
+                    <div class="card devices"><div class="value">90+</div><div class="label">Dispositivos</div></div>
                     <div class="card crypto"><div class="value">AES</div><div class="label">GCM-256</div></div>
                 </div>
             </div>
-            <div class="scroll-hint" style="margin-top: 2rem;"> Deslize para detalhes técnicos <i class="fas fa-chevron-down"></i></div>
+            <div class="scroll-hint"> Deslize para detalhes técnicos <i class="fas fa-chevron-down"></i></div>
         </div>
 
         <div class="section">
@@ -666,24 +677,24 @@
         </div>
 
         <div class="section">
-            <h2>Motores Gêmeos: A Arquitetura v56</h2>
-            <p>O "coração" do Zero Hub é seu motor de comandos v56, otimizado para eliminar gargalos.</p>
+            <h2>Motores Gêmeos v56</h2>
+            <p>O "coração" do Zero Hub é seu motor otimizado para eliminar gargalos.</p>
             <div class="stats-container">
                 <div class="stats">
                     <div class="card feature-card">
                         <i class="fas fa-cogs"></i>
                         <h3>Motor 1 (Comandos)</h3>
-                        <p>Pool de 15 slots paralelos. Executa rotinas complexas sem filas de espera.</p>
+                        <p>Pool de 15 slots paralelos. Executa rotinas complexas sem filas.</p>
                     </div>
                     <div class="card feature-card">
                         <i class="fas fa-assistive-listening-systems"></i>
                         <h3>Motor 2 (Advisor)</h3>
-                        <p>Dedicado a ouvir "gritos" (UDP) e atualizar a UI em tempo real.</p>
+                        <p>Ouve "gritos" (UDP) e atualiza a UI em tempo real.</p>
                     </div>
                     <div class="card feature-card">
                         <i class="fas fa-shield-alt"></i>
                         <h3>Segurança Blindada</h3>
-                        <p>Token Auth + AES-GCM. Bloqueia ataques de Replay na rede local.</p>
+                        <p>Token Auth + AES-GCM. Bloqueia ataques de Replay.</p>
                     </div>
                 </div>
             </div>
