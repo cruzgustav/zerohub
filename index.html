@@ -120,7 +120,7 @@
         .section {
             min-height: 100vh;
             padding-top: calc(var(--header-height) + 2rem);
-            padding-bottom: 4rem; /* Espaço extra no fundo */
+            padding-bottom: 4rem;
             padding-left: 2rem;
             padding-right: 2rem;
             display: flex;
@@ -142,11 +142,11 @@
         .hero-video-wrapper video { width: 100%; height: auto; display: block; }
 
         .feature-cards-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; max-width: 1200px; width: 100%; }
-        .feature-card { background-color: var(--card-bg); padding: 1.5rem; border-radius: 12px; flex: 1 1 280px; max-width: 350px; text-align: center; box-shadow: 0 8px 20px var(--shadow-color); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--card-border); display: flex; flex-direction: column; align-items: center; }
+        .feature-card { background-color: var(--card-bg); padding: 2rem 1.5rem; border-radius: 12px; flex: 1 1 300px; max-width: 380px; text-align: center; box-shadow: 0 8px 20px var(--shadow-color); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--card-border); display: flex; flex-direction: column; align-items: center; }
         .feature-card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); }
         .feature-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; display: block; }
         .feature-card h3 { color: var(--text); font-size: 1.3rem; margin-bottom: 0.8rem; }
-        .feature-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin: 0 auto; }
+        .feature-card p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin: 0 auto; }
 
         h1, h2 { background: linear-gradient(90deg, #00d4ff, #00ff9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; }
         [data-theme="light"] h1, [data-theme="light"] h2 { background: none; -webkit-text-fill-color: initial; color: #1a1a2e; }
@@ -190,7 +190,6 @@
         pre.dart-code-snippet:hover { border-color: var(--green); }
         pre.dart-code-snippet code { font-family: 'Courier New', Courier, monospace; color: #c0c0ff; }
         
-        /* Botões de Download (Agora na Hero) */
         .download-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; width: 100%; }
         .download-button { background-color: var(--card-bg); color: var(--text); padding: 1rem 1.8rem; border-radius: 10px; text-decoration: none; display: flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease; border: 1px solid var(--border-color); }
         .download-button:hover { transform: translateY(-5px); box-shadow: 0 8px 20px var(--shadow-color); }
@@ -305,14 +304,14 @@
                 <div class="profile-right">
                     <div class="detail-card" style="margin-bottom: 1.5rem;">
                         <p class="profile-titles">Especialista em Segurança Cibernética • IoT Maker • Systems & Network Developer</p>
-                        <p class="profile-desc">Fundador da <strong>Soft IOT</strong> e criador do protocolo <strong>Zero Hub</strong> — rede P2P com latência de 12ms, criptografia AES-GCM 256 e arquitetura híbrida blindada.</p>
+                        <p class="profile-desc">Fundador da <strong>Soft IOT</strong> e criador do protocolo <strong>Zero Hub</strong> — rede P2P com latência de 12ms, criptografia AES-GCM 256 e arquitetura 100% Dart AOT.</p>
                     </div>
                     <div class="details-grid"> 
                         <div class="detail-card"> 
                             <h3><i class="fas fa-graduation-cap"></i> Formação & Foco</h3>
                             <ul class="detail-list"> 
                                 <li>Graduando em <strong>Segurança Cibernética</strong> (UNIASSELVI, 2025)</li>
-                                <li>Foco em Redes P2P, Criptografia e Embarcados (C/C++)</li>
+                                <li>Foco em Redes P2P, Criptografia e Embarcados (C++)</li>
                                 <li>Estudos em <strong>CCNA</strong> e <strong>ISO 27001</strong></li>
                             </ul>
                         </div>
@@ -342,7 +341,7 @@
                 <div class="hero-text">
                     <h1>SOFT IOT</h1>
                     <p>Automação segura, sólida e <strong>Privada</strong>.</p>
-                    <p>Funciona em <strong>Local (LAN-First)</strong>, Híbrido ou WAN.</p>
+                    <p>Controle total da sua casa com tecnologia <strong>Dart Nativa</strong>, funcionando perfeitamente em modo <strong>Local (LAN-First)</strong>, Híbrido ou WAN.</p>
                 </div>
                 <div class="hero-media">
                     <div class="hero-video-wrapper">
@@ -353,7 +352,7 @@
 
             <div class="stats-container">
                 <div class="stats">
-                    <div class="card"><div class="value">Dart</div><div class="label">Core Sólido</div></div>
+                    <div class="card"><div class="value">Dart</div><div class="label">Core Nativo</div></div>
                     <div class="card"><div class="value">AES-GCM</div><div class="label">Criptografia</div></div>
                     <div class="card"><div class="value">Privado</div><div class="label">Sem Nuvem</div></div>
                 </div>
@@ -408,10 +407,11 @@
 
         <div class="section">
             <h2>Arquitetura Robusta</h2>
+            <p>Baseada em compilação AOT e renderização Skia para máxima fluidez.</p>
             <div class="feature-cards-container">
-                <div class="feature-card"><i class="fab fa-dart"></i><h3>Motor Dart AOT</h3><p>Compilação nativa de alta performance.</p></div>
-                <div class="feature-card"><i class="fab fa-dev"></i><h3>App Flutter</h3><p>Multiplataforma fluido.</p></div>
-                <div class="feature-card"><i class="fas fa-microchip"></i><h3>IA Local</h3><p>Aprendizado sem nuvem.</p></div>
+                <div class="feature-card"><i class="fab fa-dart"></i><h3>Motor Dart AOT</h3><p>Código compilado para linguagem de máquina (ARM/x64). Sem pontes JavaScript, sem gargalos, com gerenciamento de memória seguro.</p></div>
+                <div class="feature-card"><i class="fas fa-layer-group"></i><h3>Flutter 3.x</h3><p>Interface nativa que roda a 60/120fps em qualquer dispositivo, garantindo uma experiência de usuário premium e responsiva.</p></div>
+                <div class="feature-card"><i class="fas fa-microchip"></i><h3>Edge Computing</h3><p>A inteligência está na borda. Cenas, automações e regras de segurança rodam localmente no hardware, não em servidores distantes.</p></div>
             </div>
         </div>
     </div>
@@ -419,7 +419,7 @@
     <div id="zerohub" class="page">
         <div class="section">
             <h1>ZEROHUB – Protocolo P2P Dart Nativo</h1>
-            <p>Latência local média de <strong>12ms</strong>. Arquitetura de motor duplo.</p>
+            <p>Latência local média de <strong>12ms</strong>. Arquitetura de motor duplo e segurança militar.</p>
             
             <div class="stats-container">
                 <div class="stats">
@@ -449,7 +449,7 @@
 
         <div class="section">
             <h2>Benchmark de Performance</h2>
-            <p>Comparativo técnico em ambiente real de estresse com 90 dispositivos.</p>
+            <p>Comparativo técnico em ambiente real de estresse com 90 dispositivos conectados simultaneamente.</p>
             <div class="comparison-container">
                 <table class="comparison-table">
                     <thead>
@@ -465,7 +465,7 @@
                             <td>Latência Local (Comando)</td>
                             <td class="neutral-point">50ms - 150ms</td>
                             <td class="negative-point">200ms - 1.5s</td>
-                            <td class="highlight-col positive-point">10ms - 20ms</td>
+                            <td class="highlight-col positive-point">2ms - 20ms (Avg 12ms)</td>
                         </tr>
                         <tr>
                             <td>Dependência de Internet</td>
@@ -492,33 +492,31 @@
 
         <div class="section">
             <h2>Motores Gêmeos: Arquitetura Dart v56</h2>
-            <p>O "coração" do Zero Hub é escrito em Dart puro, com carga dividida em dois isolados lógicos.</p>
-            <div class="stats-container">
-                <div class="stats">
-                    <div class="card feature-card"><i class="fas fa-cogs"></i><h3>Motor 1 (Comandos)</h3><p>Pipeline WebSocket persistente. 15 slots paralelos para execução instantânea.</p></div>
-                    <div class="card feature-card"><i class="fas fa-assistive-listening-systems"></i><h3>Motor 2 (Advisor)</h3><p>Escuta passiva de UDP Multicast. Atualiza a UI em tempo real.</p></div>
-                    <div class="card feature-card"><i class="fas fa-shield-alt"></i><h3>Anti-Replay</h3><p>Token Auth com Timestamp. Comandos gravados por hackers tornam-se inúteis.</p></div>
-                </div>
+            <p>O "coração" do Zero Hub é escrito em Dart puro, utilizando Isolates para dividir a carga pesada em duas unidades lógicas independentes.</p>
+            <div class="feature-cards-container">
+                <div class="feature-card"><i class="fas fa-cogs"></i><h3>Motor 1 (Comandos)</h3><p>Gerencia o pipeline WebSocket persistente. Possui 15 slots paralelos de execução para garantir que comandos complexos nunca travem a fila principal.</p></div>
+                <div class="feature-card"><i class="fas fa-assistive-listening-systems"></i><h3>Motor 2 (Advisor)</h3><p>Um ouvinte passivo dedicado ao UDP Multicast. Ele captura os "gritos" de status dos dispositivos e atualiza a UI a 60fps, sem bloquear o envio de comandos.</p></div>
+                <div class="feature-card"><i class="fas fa-stopwatch"></i><h3>Anti-Replay</h3><p>Cada pacote possui Timestamp e Nonce únicos. O motor descarta matematicamente qualquer comando duplicado ou gravado por atacantes.</p></div>
             </div>
         </div>
 
         <div class="section">
              <h2>Híbrido e Seguro por Design</h2>
-             <p>Combinamos a velocidade do UDP Multicast com a confiabilidade do WebSocket.</p>
+             <p>Uma arquitetura que combina a velocidade de descoberta do UDP com a confiabilidade do TCP/WebSocket.</p>
              <div class="feature-cards-container">
-                 <div class="feature-card"><i class="fas fa-key"></i><h3>HMAC-SHA256</h3><p>Autenticação dinâmica a cada comando.</p></div>
-                 <div class="feature-card"><i class="fas fa-file-contract"></i><h3>AES-GCM 256</h3><p>Confidencialidade total dos dados (Payload).</p></div>
-                 <div class="feature-card"><i class="fas fa-qrcode"></i><h3>Acesso via QR</h3><p>Compartilhamento de chaves seguro e offline.</p></div>
+                 <div class="feature-card"><i class="fas fa-key"></i><h3>HMAC-SHA256</h3><p><strong>Autenticação Dinâmica:</strong> A cada milissegundo, um novo token assinado digitalmente é gerado. Só quem possui a chave mestra da casa consegue emitir comandos válidos.</p></div>
+                 <div class="feature-card"><i class="fas fa-file-contract"></i><h3>AES-GCM 256</h3><p><strong>Confidencialidade:</strong> O payload (JSON) viaja 100% encriptado. Nem o roteador, nem o provedor de internet sabem qual dispositivo você acionou.</p></div>
+                 <div class="feature-card"><i class="fas fa-qrcode"></i><h3>Acesso via QR</h3><p><strong>Compartilhamento Offline:</strong> Transfira as chaves de acesso para familiares via QR Code criptografado, sem nunca expor senhas na nuvem.</p></div>
              </div>
         </div>
         
         <div class="section">
             <h2>Integração Versátil</h2>
-            <p>APIs e SDKs para integração.</p>
+            <p>APIs e SDKs prontos para levar o ZeroHub para qualquer plataforma.</p>
             <div class="feature-cards-container">
-                <div class="feature-card"><i class="fab fa-python"></i><h3>Python SDK</h3></div>
-                <div class="feature-card"><i class="fas fa-code"></i><h3>Protocolo Aberto</h3></div>
-                <div class="feature-card"><i class="fab fa-js"></i><h3>Node.js</h3></div>
+                <div class="feature-card"><i class="fab fa-python"></i><h3>Python SDK</h3><p>Perfeito para scripts de automação desktop e integração com sistemas legados.</p></div>
+                <div class="feature-card"><i class="fas fa-code"></i><h3>Protocolo Aberto</h3><p>Especificação JSON completa para implementação de firmwares em C++ (ESP-IDF/Arduino).</p></div>
+                <div class="feature-card"><i class="fab fa-js"></i><h3>Node.js / Web</h3><p>Controle seus dispositivos via browser ou crie servidores de automação locais robustos.</p></div>
             </div>
         </div>
     </div>
