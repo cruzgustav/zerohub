@@ -1,6 +1,6 @@
 ## LICENÇA DE USO NÃO COMERCIAL (NON-COMMERCIAL LICENSE)
 
-Copyright (c) [Ano Atual, ex: 2025] [Seu Nome ou Nome da Empresa]
+Copyright (c) 2025 Gustavo Novaes Cruz , Bruna de Almeida Sebastião
 
 A permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e arquivos de documentação associados (o "Software"), para:
 
@@ -13,7 +13,9 @@ A permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cóp
 O presente software não pode ser utilizado nas seguintes situações:
 
 1.  **USO COMERCIAL OU FINS LUCRATIVOS:** É estritamente proibida qualquer utilização que tenha como objetivo a obtenção de lucro, geração de receita, ou que faça parte de um produto ou serviço vendido, licenciado ou distribuído comercialmente.
-2.  **SUB-LICENCIAMENTO COMERCIAL:** Não é permitido sub-licenciar, vender, ou transferir o Software para uso comercial de terceiros sem a compra de uma licença comercial separada, diretamente de [Seu Nome ou Nome da Empresa].
+2.  **SUB-LICENCIAMENTO COMERCIAL:** Não é permitido sub-licenciar, vender, ou transferir o Software para uso comercial de terceiros sem a compra de uma licença comercial separada, diretamente de gustavonv@proton.me
 3.  **GARANTIA:** O Software é fornecido "no estado em que se encontra" (AS IS), sem garantia de qualquer tipo, expressa ou implícita.
 
-Ao utilizar o Software, o usuário concorda com os termos e restrições desta Licença. Para aquisição de licença comercial ou esclarecimento sobre os termos, entre em contato através do e-mail: [Seu E-mail de Contato].
+Ao utilizar o Software, o usuário concorda com os termos e restrições desta Licença. Para aquisição de licença comercial ou esclarecimento sobre os termos, entre em contato através do e-mail: gustavonv@proton.me
+
+USO COMERCIAL PROIBIDO
