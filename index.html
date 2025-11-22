@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo C. - Soft IoT</title>
+    <title>Gustavo C. - Soft IoT | ZeroHub</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -304,7 +304,7 @@
                 <div class="profile-right">
                     <div class="detail-card" style="margin-bottom: 1.5rem;">
                         <p class="profile-titles">Especialista em Segurança Cibernética • IoT Maker • Systems & Network Developer</p>
-                        <p class="profile-desc">Fundador da <strong>Soft IOT</strong> e criador do protocolo <strong>Zero Hub</strong> — rede P2P com latência de 12ms, criptografia AES-GCM 256 e arquitetura 100% Dart AOT.</p>
+                        <p class="profile-desc">Fundador da <strong>Soft IOT</strong> e criador do protocolo <strong>Zero Hub</strong> — rede P2P com latência de 22ms, criptografia AES-GCM 256 e arquitetura 100% Dart AOT.</p>
                     </div>
                     <div class="details-grid"> 
                         <div class="detail-card"> 
@@ -419,12 +419,12 @@
     <div id="zerohub" class="page">
         <div class="section">
             <h1>ZEROHUB – Protocolo P2P Dart Nativo</h1>
-            <p>Latência local média de <strong>12ms</strong>. Arquitetura de motor duplo e segurança militar.</p>
+            <p>Latência local média de <strong>22ms</strong>. Arquitetura de motor duplo e segurança militar.</p>
             
             <div class="stats-container">
                 <div class="stats">
-                    <div class="card latency"><div class="value">~12<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Média</div></div>
-                    <div class="card freq"><div class="value">Dart</div><div class="label">Motor Nativo (AOT)</div></div>
+                    <div class="card latency"><div class="value">~22<span style="font-size:1.5rem;">ms</span></div><div class="label">Latência Média</div></div>
+                    <div class="card freq"><div class="value">Twin-Scroll</div><div class="label">Motor Duplo</div></div>
                     <div class="card devices"><div class="value">90+</div><div class="label">Dispositivos</div></div>
                     <div class="card crypto"><div class="value">AES+HMAC</div><div class="label">Criptografia</div></div>
                 </div>
@@ -448,6 +448,16 @@
         </div>
 
         <div class="section">
+            <h2>Tecnologia InstantResponse™</h2>
+            <p>Mais rápido que o pensamento. A nossa arquitetura elimina o "Turbo Lag" das conexões tradicionais.</p>
+            <div class="feature-cards-container">
+                <div class="feature-card"><i class="fas fa-tachometer-alt"></i><h3>Twin-Scroll Engine</h3><p><strong>Motor Híbrido:</strong> Um canal WebSocket persistente para força bruta (comandos) e um canal UDP de reação rápida (status). O resultado? Resposta imediata.</p></div>
+                <div class="feature-card"><i class="fas fa-shield-alt"></i><h3>Blindagem Individual</h3><p><strong>Segurança Bancária:</strong> Cada interruptor possui seu próprio cofre digital (AES-256). Comprometer um dispositivo não coloca a casa inteira em risco.</p></div>
+                <div class="feature-card"><i class="fas fa-users-cog"></i><h3>Controle Familiar Seguro</h3><p><strong>HomeKey Rotation:</strong> Revogue acessos indesejados com um único clique, sem precisar reconfigurar fisicamente seus 90 dispositivos.</p></div>
+            </div>
+        </div>
+
+        <div class="section">
             <h2>Benchmark de Performance</h2>
             <p>Comparativo técnico em ambiente real de estresse com 90 dispositivos conectados simultaneamente.</p>
             <div class="comparison-container">
@@ -465,7 +475,7 @@
                             <td>Latência Local (Comando)</td>
                             <td class="neutral-point">50ms - 150ms</td>
                             <td class="negative-point">200ms - 1.5s</td>
-                            <td class="highlight-col positive-point">2ms - 20ms (Avg 12ms)</td>
+                            <td class="highlight-col positive-point">22ms - 60ms (Avg 30ms)</td>
                         </tr>
                         <tr>
                             <td>Dependência de Internet</td>
@@ -477,7 +487,7 @@
                             <td>Escalabilidade (Gargalo)</td>
                             <td class="negative-point">Congestiona HTTP</td>
                             <td class="neutral-point">Depende do Broker</td>
-                            <td class="highlight-col">Alta Performance<br><span class="test-badge"><i class="fas fa-check-circle"></i> Testado c/ 90 Devices</span></td>
+                            <td class="highlight-col">Alta Performance<br><span class="test-badge"><i class="fas fa-check-circle"></i> Validado c/ 90 Nós</span></td>
                         </tr>
                         <tr>
                             <td>Segurança (Payload)</td>
@@ -491,24 +501,24 @@
         </div>
 
         <div class="section">
-            <h2>Motores Gêmeos: Arquitetura Dart v56</h2>
-            <p>O "coração" do Zero Hub é escrito em Dart puro, utilizando Isolates para dividir a carga pesada em duas unidades lógicas independentes.</p>
-            <div class="feature-cards-container">
-                <div class="feature-card"><i class="fas fa-cogs"></i><h3>Motor 1 (Comandos)</h3><p>Gerencia o pipeline WebSocket persistente. Possui 15 slots paralelos de execução para garantir que comandos complexos nunca travem a fila principal.</p></div>
-                <div class="feature-card"><i class="fas fa-assistive-listening-systems"></i><h3>Motor 2 (Advisor)</h3><p>Um ouvinte passivo dedicado ao UDP Multicast. Ele captura os "gritos" de status dos dispositivos e atualiza a UI a 60fps, sem bloquear o envio de comandos.</p></div>
-                <div class="feature-card"><i class="fas fa-stopwatch"></i><h3>Anti-Replay</h3><p>Cada pacote possui Timestamp e Nonce únicos. O motor descarta matematicamente qualquer comando duplicado ou gravado por atacantes.</p></div>
-            </div>
-        </div>
-
-        <div class="section">
-             <h2>Híbrido e Seguro por Design</h2>
-             <p>Uma arquitetura que combina a velocidade de descoberta do UDP com a confiabilidade do TCP/WebSocket.</p>
+             <h2>Motores Gêmeos: Arquitetura Dart v56</h2>
+             <p>O "coração" do Zero Hub é escrito em Dart puro, utilizando Isolates para dividir a carga pesada em duas unidades lógicas independentes.</p>
              <div class="feature-cards-container">
-                 <div class="feature-card"><i class="fas fa-key"></i><h3>HMAC-SHA256</h3><p><strong>Autenticação Dinâmica:</strong> A cada milissegundo, um novo token assinado digitalmente é gerado. Só quem possui a chave mestra da casa consegue emitir comandos válidos.</p></div>
-                 <div class="feature-card"><i class="fas fa-file-contract"></i><h3>AES-GCM 256</h3><p><strong>Confidencialidade:</strong> O payload (JSON) viaja 100% encriptado. Nem o roteador, nem o provedor de internet sabem qual dispositivo você acionou.</p></div>
-                 <div class="feature-card"><i class="fas fa-qrcode"></i><h3>Acesso via QR</h3><p><strong>Compartilhamento Offline:</strong> Transfira as chaves de acesso para familiares via QR Code criptografado, sem nunca expor senhas na nuvem.</p></div>
+                 <div class="feature-card"><i class="fas fa-cogs"></i><h3>Motor 1 (Comandos)</h3><p>Gerencia o pipeline WebSocket persistente. Possui 15 slots paralelos de execução para garantir que comandos complexos nunca travem a fila principal.</p></div>
+                 <div class="feature-card"><i class="fas fa-assistive-listening-systems"></i><h3>Motor 2 (Advisor)</h3><p>Um ouvinte passivo dedicado ao UDP Multicast. Ele captura os "gritos" de status dos dispositivos e atualiza a UI a 60fps, sem bloquear o envio de comandos.</p></div>
+                 <div class="feature-card"><i class="fas fa-stopwatch"></i><h3>Anti-Replay</h3><p>Cada pacote possui Timestamp e Nonce únicos. O motor descarta matematicamente qualquer comando duplicado ou gravado por atacantes.</p></div>
              </div>
-        </div>
+         </div>
+
+         <div class="section">
+              <h2>Híbrido e Seguro por Design</h2>
+              <p>Uma arquitetura que combina a velocidade de descoberta do UDP com a confiabilidade do TCP/WebSocket.</p>
+              <div class="feature-cards-container">
+                  <div class="feature-card"><i class="fas fa-key"></i><h3>HMAC-SHA256</h3><p><strong>Autenticação Dinâmica:</strong> A cada milissegundo, um novo token assinado digitalmente é gerado. Só quem possui a chave mestra da casa consegue emitir comandos válidos.</p></div>
+                  <div class="feature-card"><i class="fas fa-file-contract"></i><h3>AES-GCM 256</h3><p><strong>Confidencialidade:</strong> O payload (JSON) viaja 100% encriptado. Nem o roteador, nem o provedor de internet sabem qual dispositivo você acionou.</p></div>
+                  <div class="feature-card"><i class="fas fa-qrcode"></i><h3>Acesso via QR</h3><p><strong>Compartilhamento Offline:</strong> Transfira as chaves de acesso para familiares via QR Code criptografado, sem nunca expor senhas na nuvem.</p></div>
+              </div>
+         </div>
         
         <div class="section">
             <h2>Integração Versátil</h2>
